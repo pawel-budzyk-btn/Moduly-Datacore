@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <title>Workflow</title>
+    <link rel="stylesheet" href="./../styles.css" />
+    <link rel="stylesheet" href="workflow.css" />
+  </head>
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    "
+  >
+    <div class="menu-container">
+      <div class="menu-container__header">Workflow zatwierdzenia</div>
+      <div class="menu-container__content">
+        <div class="menu-container__content__header">
+          <div class="menu-container__content__header__icon">
+            <img src="./../workflow-left-icon.svg" />
+          </div>
+          <div class="menu-container__content__header__central_icons">
+            <button class="menu-container__content__header__central_icons__icon" style="background-color: #19CD89;"><svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.63148 8.01168L10.3351 0.140035C10.4092 0.05298 10.4966 0.00647088 10.5971 0.000508183C10.6976 -0.00545451 10.7898 0.0410546 10.8736 0.140035C10.9573 0.239016 10.9995 0.34545 11 0.459337C11.0005 0.573225 10.9586 0.679361 10.8743 0.777745L4.06255 8.78266C3.93917 8.92755 3.79548 9 3.63148 9C3.46749 9 3.3238 8.92755 3.20042 8.78266L0.115925 5.16032C0.0417955 5.07327 0.00320769 4.96982 0.000161281 4.84997C-0.00288513 4.73012 0.037226 4.621 0.120495 4.52261C0.203763 4.42423 0.294394 4.37504 0.392387 4.37504C0.49038 4.37504 0.58101 4.42423 0.664279 4.52261L3.63148 8.01168Z" fill="white"/>
+              </svg>
+              </button>
+            <button class="menu-container__content__header__central_icons__icon" style="background-color: #CD3950;"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.505073 9L0 8.49493L3.99493 4.5L0 0.505073L0.505073 0L4.5 3.99493L8.49493 0L9 0.505073L5.00507 4.5L9 8.49493L8.49493 9L4.5 5.00507L0.505073 9Z" fill="white"/>
+              </svg>
+              </button>
+            <button class="menu-container__content__header__central_icons__icon" style="background-color: #CDC139;"></button>
+            <button class="menu-container__content__header__central_icons__icon" style="background-color: #39BECD;"></button>
+          </div>
+          <div class="menu-container__content__header__icon">
+            <img src="./../workflow-right-icon.svg" />
+          </div>
+        </div>
+        <div class="timeline-container">
+          <div class="left-side-timeline">
+            <div class="left-side-timeline__current_status"></div>
+          </div>
+          <div class="right-side-timeline">
+            <!-- 1 -->
+            <div class="right-side-timeline__item" style="background: #19cd89; border: 1px solid #19cd89;">
+              <h4>Dostawca</h4>
+              <div class="right-side-timeline__item-content" style="  border-left: 1px solid #19cd89;
+                border-right: 1px solid #19cd89;">
+                <div class="right-side-timeline__left-side-icon" style="background-color: #19CD89">
+                  <img src="./../dostawca.svg" />
+                  <div class="right-side-timeline__left-side-icon__dots">
+                    <div class="right-side-timeline__left-side-icon__dot"></div>
+                    <div class="right-side-timeline__left-side-icon__dot"></div>
+                    <div class="right-side-timeline__left-side-icon__dot" style="background-color: #19CD89;"></div>
+                    <div class="right-side-timeline__left-side-icon__dot" style="background-color: #19CD89;"></div>
+                  </div>
+                </div>
+                <div class="right-side-timeline__right_content" >
+                  <span class="right-side-timeline__right-content__title">Informacja dla kolejnej osoby w workflow:</span>
+                  <span class="description" style="border-left: 3px solid #19cd89;">Brak plików, nie będziemy tego akceptować...</span>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; margin-right: 12px;">
+                  <svg width="39" height="45" viewBox="0 0 39 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.4599 29.9998C17.139 30 16.831 29.8701 16.603 29.6384L8.89301 21.8098C8.66469 21.5764 8.53585 21.2597 8.53469 20.929C8.53353 20.5984 8.66015 20.2807 8.88683 20.0456C9.11351 19.8105 9.42178 19.677 9.74416 19.6745C10.0665 19.672 10.3767 19.8006 10.6069 20.0322L17.3981 26.9279L28.3358 14.1717C28.4415 14.0486 28.5698 13.948 28.7134 13.8758C28.8569 13.8035 29.013 13.761 29.1726 13.7505C29.3322 13.7401 29.4922 13.7621 29.6435 13.8151C29.7949 13.8681 29.9346 13.9512 30.0546 14.0596C30.1746 14.1679 30.2727 14.2995 30.3431 14.4468C30.4136 14.594 30.4551 14.7541 30.4652 14.9178C30.4754 15.0815 30.454 15.2456 30.4023 15.4008C30.3506 15.5561 30.2696 15.6993 30.164 15.8224L18.374 29.5749C18.2648 29.7029 18.1311 29.8067 17.9813 29.8798C17.8314 29.9529 17.6686 29.9937 17.5028 29.9998H17.4599Z" fill="#19CD89"/>
+                    <path d="M19.4856 45C18.7765 45.0006 18.0825 44.7893 17.4885 44.392L3.88244 34.7296C2.69624 33.9373 1.72192 32.8535 1.04804 31.5767C0.374169 30.2999 0.0221169 28.8706 0.0238879 27.4187L0 9.51513C0.00175786 8.64638 0.296011 7.80491 0.832989 7.13305C1.36997 6.46118 2.11671 6.00016 2.94693 5.82796L18.6097 0.11405C19.139 -0.0203382 19.6902 -0.0361647 20.226 0.0676487L36.1982 5.87678C36.9929 6.07047 37.7003 6.53467 38.2048 7.19365C38.7093 7.85263 38.9812 8.66751 38.9762 9.50536L39 27.4041C39.0032 28.8622 38.6506 30.2981 37.9741 31.5806C37.2976 32.8631 36.3189 33.9516 35.1271 34.7467L21.5304 44.3723C20.9228 44.781 20.2122 44.9991 19.4856 45ZM19.5785 2.47041C19.5833 2.48506 19.419 2.48506 19.2547 2.51926L3.59435 8.23317C3.28493 8.27011 2.99848 8.41897 2.78645 8.65304C2.57442 8.88711 2.45069 9.19104 2.43749 9.51026L2.46128 27.4163C2.46164 28.4577 2.716 29.4825 3.20118 30.3973C3.68636 31.3121 4.38696 32.0879 5.23917 32.654L18.8452 42.3164C19.0455 42.4432 19.2768 42.5087 19.5121 42.5052C19.7474 42.5018 19.9769 42.4295 20.1735 42.2969L33.7844 32.6614C34.6386 32.0933 35.3405 31.3147 35.8257 30.3967C36.311 29.4788 36.5642 28.4507 36.5623 27.4065L36.5387 9.51026C36.5373 9.21984 36.4383 8.93881 36.2583 8.71459C36.0783 8.49038 35.8284 8.33672 35.5508 8.27957L19.5785 2.47041Z" fill="#19CD89"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="right-side-timeline__item-footer" style="  border-left: 1px solid #19cd89;
+              border-right: 1px solid #19cd89;
+              border-bottom: 1px solid #19cd89;">
+                Modyfikacja: <strong>m.dresler@auchan.pl</strong> dn.
+                <strong>24.02.2025</strong> g. 12:00
+              </div>
+              <div class="right-side-timeline__item-pointer">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.6571 0.676311C10.3893 0.676311 10.1751 0.790311 9.89392 0.930597L1.28906 5.10974C0.71992 5.3906 0.539062 5.64517 0.539062 6.00003C0.539062 6.35488 0.71992 6.61602 1.28906 6.89717L9.89392 11.0692C10.1819 11.2097 10.3962 11.3235 10.6639 11.3235C11.1596 11.3235 11.4611 10.9486 11.4611 10.3663V1.63374C11.4611 1.05088 11.1528 0.676025 10.6573 0.676025" fill="#19CD89"/>
+                  </svg>
+                  
+              </div>
+              <div class="left-side-timeline__date-content" style="color: #19CD89;">
+                <div class="left-side-timeline__date-content__circle" style="background-color: #19CD89;"></div>
+                <div class="left-side-timeline__date-content__date">21 lut</div>
+                <div class="left-side-timeline__date-content__year">2025</div>
+              </div>
+            </div>
+            
+            <!-- 2 -->
+            <div class="right-side-timeline__item" style="background: #ACACAC; border: 1px solid #ACACAC;">
+              <h4>Dostawca</h4>
+              <div class="right-side-timeline__item-content" style="  border-left: 1px solid #ACACAC;
+            border-right: 1px solid #ACACAC;">
+                <div class="right-side-timeline__left-side-icon" style="background-color: #E0001A">
+                  <svg width="42" height="36" viewBox="0 0 42 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M27.8836 26.6895L30.7606 36H28.7519L26.0282 27.1137C26.6145 27.0214 27.2463 26.9008 27.8836 26.6895ZM33.1262 3.10342C33.4019 3.10342 33.6595 3.1727 33.892 3.29066C33.845 3.28238 33.798 3.2735 33.7489 3.2735C33.182 3.2735 32.723 3.76011 32.723 4.35339C32.723 4.94879 33.182 5.42897 33.7489 5.42897C34.3154 5.42897 34.7727 4.94879 34.7727 4.35339C34.7727 4.31628 34.7677 4.28412 34.7656 4.25255C34.8511 4.47135 34.9013 4.71159 34.9013 4.96624C34.9013 5.9919 34.1058 6.82754 33.1262 6.82754C32.148 6.82754 31.3521 5.9919 31.3521 4.96624C31.3521 3.93386 32.148 3.10342 33.1262 3.10342ZM22.9517 24.8876C25.3647 24.8876 31.1249 24.2383 34.2426 18.9311C37.3638 13.6239 38.4509 5.20117 38.4509 5.20117L41.8689 3.48544C42.0824 3.37178 42.0262 2.98063 41.7654 2.98063H38.0826C37.5052 2.02814 35.5056 0 32.5604 0C30.8139 0 29.2828 0.521929 27.9114 1.46903C27.9114 1.46903 25.9119 2.9114 23.0048 5.56279L14.1035 13.4093C13.418 14.0157 12.5785 14.4103 11.4187 14.4103H0.219288C-0.0979925 14.4103 0.00746183 14.6923 0.0587046 14.8555C0.848161 17.4053 2.9565 19.6801 6.6359 19.6801L4.00567 22.5496C3.90262 22.6579 3.90262 22.9827 4.16268 22.9827H14.1553C21.3764 22.9827 25.817 19.6334 28.7334 14.9923C28.9835 14.5948 29.2195 14.1707 29.4431 13.7617C29.5521 13.8176 29.5627 13.9287 29.512 14.0373C28.775 15.9207 26.9349 19.7398 23.5691 22.0111C22.4103 22.7302 22.042 22.9509 20.4119 23.6135C20.2995 23.665 20.2546 23.852 20.3064 24.0164L24.3495 36H26.5576L22.8505 24.8876L22.9517 24.8876Z" fill="white"/>
+                  </svg>    
+                  <div class="right-side-timeline__left-side-icon__dots">
+                    <div class="right-side-timeline__left-side-icon__dot"></div>
+                    <div class="right-side-timeline__left-side-icon__dot"></div>
+                    <div class="right-side-timeline__left-side-icon__dot" style="background-color: #E0001A;"></div>
+                    <div class="right-side-timeline__left-side-icon__dot" style="background-color: #E0001A;"></div>
+                  </div>                
+                </div>
+                <div class="right-side-timeline__right_content" >
+                  <span class="right-side-timeline__right-content__title">Informacja dla kolejnej osoby w workflow:</span>
+                  <span class="description" style="border-left: 3px solid #E0001A;">Brak plików, nie będziemy tego akceptować...</span>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; margin-right: 12px;">
+                  <svg width="39" height="45" viewBox="0 0 39 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.4856 45C18.7765 45.0006 18.0825 44.7893 17.4885 44.392L3.88244 34.7296C2.69624 33.9373 1.72192 32.8535 1.04804 31.5767C0.374169 30.2999 0.0221169 28.8706 0.0238879 27.4187L0 9.51513C0.00175786 8.64638 0.296011 7.80491 0.832989 7.13305C1.36997 6.46118 2.11671 6.00016 2.94693 5.82796L18.6097 0.11405C19.139 -0.0203382 19.6902 -0.0361647 20.226 0.0676487L36.1982 5.87678C36.9929 6.07047 37.7003 6.53467 38.2048 7.19365C38.7093 7.85263 38.9812 8.66751 38.9762 9.50536L39 27.4041C39.0032 28.8622 38.6506 30.2981 37.9741 31.5806C37.2976 32.8631 36.3189 33.9516 35.1271 34.7467L21.5304 44.3723C20.9228 44.781 20.2122 44.9991 19.4856 45ZM19.5785 2.47041C19.5833 2.48506 19.419 2.48506 19.2547 2.51926L3.59435 8.23317C3.28493 8.2701 2.99848 8.41897 2.78645 8.65304C2.57442 8.88711 2.45069 9.19104 2.43749 9.51026L2.46128 27.4163C2.46164 28.4577 2.716 29.4825 3.20118 30.3973C3.68636 31.3121 4.38696 32.0879 5.23917 32.654L18.8452 42.3164C19.0455 42.4432 19.2768 42.5087 19.5121 42.5052C19.7474 42.5018 19.9769 42.4295 20.1735 42.2969L33.7844 32.6614C34.6386 32.0933 35.3405 31.3147 35.8257 30.3967C36.311 29.4788 36.5642 28.4507 36.5623 27.4065L36.5387 9.51026C36.5373 9.21984 36.4383 8.9388 36.2583 8.71459C36.0783 8.49038 35.8284 8.33672 35.5508 8.27957L19.5785 2.47041Z" fill="#ACACAC"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="right-side-timeline__item-footer" style="  border-left: 1px solid #ACACAC;
+              border-right: 1px solid #ACACAC;
+              border-bottom: 1px solid #ACACAC;">
+                Modyfikacja: <strong>m.dresler@auchan.pl</strong> dn.
+                <strong>24.02.2025</strong> g. 12:00
+              </div>
+              <div class="right-side-timeline__item-pointer">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.6571 0.676311C10.3893 0.676311 10.1751 0.790311 9.89392 0.930597L1.28906 5.10974C0.71992 5.3906 0.539062 5.64517 0.539062 6.00003C0.539062 6.35488 0.71992 6.61602 1.28906 6.89717L9.89392 11.0692C10.1819 11.2097 10.3962 11.3235 10.6639 11.3235C11.1596 11.3235 11.4611 10.9486 11.4611 10.3663V1.63374C11.4611 1.05088 11.1528 0.676025 10.6573 0.676025" fill="#ACACAC"/>
+                  </svg>
+                  
+              </div>
+              <div class="left-side-timeline__date-content" style="color: #ACACAC;">
+                <div class="left-side-timeline__date-content__circle" style="background-color: #ACACAC;"></div>
+                <div class="left-side-timeline__date-content__date">???</div>
+                <div class="left-side-timeline__date-content__year">???</div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

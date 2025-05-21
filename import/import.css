@@ -1,0 +1,174 @@
+:root {
+  --header-icon-background-color: var(--color-a-cold-gray-500);
+  --primary-color: #e0001a;
+  --outline-color: #2055cd;
+  --error-color: #e0001a;
+  --success-color: #00702c;
+  --text-color: var(--color-a-cold-gray-900);
+  --input-text-color: var(--color-a-cold-gray-800);
+  --border-color: var(--color-a-cold-gray-400);
+  --hightlight-text-color: #ffb924;
+  --searcher-option-list-item-background-color: var(--color-a-cold-gray-400);
+  --color-a-cold-gray-300: #d6e1ec;
+  --footer-button-background-color: #940011;
+  --footer-button-text-color: var(--color-a-cold-gray-1000);
+  --input-background-color: var(--color-a-cold-gray-1000);
+  --placeholder-color: var(--color-a-cold-gray-600);
+}
+
+.dark {
+  --menu-container-background-color: var(--color-a-cold-gray-900);
+  --menu-container-header-background-color: #032949;
+  --input-background-color: var(--color-a-cold-gray-800);
+  --border-color: var(--color-a-cold-gray-600);
+  --text-color: var(--color-a-cold-gray-200);
+  --placeholder-color: var(--color-a-cold-gray-500);
+}
+
+.menu-container {
+  font-family: "Sana-Sans-Alt", sans-serif;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 440px;
+  min-height: calc(100% - 24px);
+  box-sizing: border-box;
+  background-color: var(--menu-container-background-color);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  background-image: url(./../nomenklatura_bg+.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 12px auto;
+}
+
+.menu-container__header {
+  background-color: var(--menu-container-header-background-color);
+  width: 100%;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--color-a-cold-gray-600);
+  border-radius: 8px 8px 0 0;
+}
+
+.menu-container__content {
+  padding: 12px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: var(--text-color);
+}
+
+/* Style do poszczególnych modułów */
+
+.menu-container__content__textareacontainer {
+  margin-top: 24px;
+  position: relative;
+}
+
+.menu-container__content__textareacontainer:first-child {
+  margin-top: 0;
+}
+
+.menu-container__content__textareacontainer-label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.menu-container__content__textareacontainer-textarea {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 4px;
+  font-family: inherit;
+  line-height: 1.5;
+  resize: vertical;
+  background-color: var(--input-background-color);
+}
+
+.menu-container__content__textareacontainer-textarea::placeholder {
+  color: var(--placeholder-color);
+}
+
+.menu-container__content__textareacontainer-warning {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.menu-container__content__textareacontainer-edit {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  background-color: var(--border-color);
+  border-radius: 0 11px 0;
+  padding: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-container__content__textareacontainer:hover
+  .menu-container__content__textareacontainer-edit {
+  opacity: 1;
+}
+
+.menu-container__top-section {
+  flex: 1;
+}
+
+.menu-container__content-button {
+  width: 100%;
+  height: 36px;
+  border-radius: 12px;
+  background-color: var(--footer-button-background-color);
+  color: var(--footer-button-text-color);
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.menu-container__top-section__input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.menu-container__top-section__input-container:first-child {
+  margin-top: 0;
+}
+
+.menu-container__top-section__input-container__label {
+  font-size: 14px;
+}
+
+.menu-container__top-section__input-container__input {
+  width: 100%;
+  height: 38px;
+  border-radius: 12px;
+  background-color: var(--input-background-color);
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.menu-container__top-section__input-container__input::placeholder {
+  color: var(--placeholder-color);
+}
