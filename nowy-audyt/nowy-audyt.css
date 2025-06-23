@@ -76,7 +76,6 @@
   margin-top: 12px;
 }
 
-
 .menu-container__content-new-audit-container-searcher {
   display: flex;
   position: relative;
@@ -103,6 +102,12 @@
   flex-direction: column;
   gap: 12px;
   flex: 1;
+}
+
+.menu-container__content-new-audit-container-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .menu-container__content-new-audit-container-item-label {
