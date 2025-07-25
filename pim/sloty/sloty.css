@@ -323,3 +323,9 @@
 .menu-container__content-list-item-content-left-description {
   font-size: 9px;
 }
+
+.task-scheduler-container__stage__header {
+  background-color: var(--color-a-cold-gray-1000);
+  height: 45px;
+  width: 100%;
+}
