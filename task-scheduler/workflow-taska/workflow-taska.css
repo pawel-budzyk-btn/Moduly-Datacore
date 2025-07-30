@@ -478,3 +478,15 @@
   color: var(--color-a-cold-gray-1000);
   border: none;
 }
+
+.workflow-header-step-active-triangle {
+  position: absolute;
+  top: 50%;
+  right: -19px;
+  transform: translateY(-50%);
+  width: 19px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
