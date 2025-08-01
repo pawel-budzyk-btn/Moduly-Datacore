@@ -280,6 +280,20 @@ body {
   justify-content: center;
 }
 
+.task-item-image-container-bottom-right-icon {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 44px;
+  height: 44px;
+  background-color: var(--input-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .task-item-image-container-bottom-bar {
   display: flex;
   align-items: center;
@@ -365,4 +379,25 @@ body {
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.task-item-image-container-bottom-circle {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  border: 6px solid var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-item-image-container-bottom-circle-inner {
+  background-color: var(--primary-color);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
