@@ -235,3 +235,134 @@ body {
 .green-status svg path {
   fill: var(--green-status-text-color);
 }
+
+.task-item-image-container {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  position: relative;
+  background-color: var(--input-background-color);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.task-item-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.task-item-image-container-top-left-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 44px;
+  height: 44px;
+  background-color: var(--input-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-item-image-container-top-right-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 44px;
+  height: 44px;
+  background-color: var(--input-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-item-image-container-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 16px);
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  padding: 8px;
+  gap: 8px;
+}
+
+.task-item-image-container-bottom-bar-left {
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+}
+
+.task-item-image-container-bottom-bar-center {
+  display: flex;
+  gap: 8px;
+  height: 44px;
+  background-color: var(--input-background-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.task-item-image-container-bottom-bar-right {
+  width: 44px;
+  height: 44px;
+  background-color: #19cd89;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+}
+
+.task-item-product-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-item-product-form-container-row {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+}
+
+.task-item-product-form-container-row-input {
+  background-color: var(--input-background-color);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  width: 100%;
+  position: relative;
+}
+
+.task-item-product-form-container-row-input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.task-item-product-form-container-row-input-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
