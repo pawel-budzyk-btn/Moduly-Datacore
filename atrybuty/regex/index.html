@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Określenie Regex</title>
+    <link rel="stylesheet" href="./../../styles.css" />
+    <link rel="stylesheet" href="regex.css" />
+  </head>
+  <body>
+    <div class="menu-container">
+      <div class="menu-container__header">Określenie Regex</div>
+      <div class="menu-container__content">
+        <div class="menu-container__top-section">
+          <div class="menu-container__top-section__input-container">
+            <span class="menu-container__top-section__input-container__label">
+              Opis działania
+            </span>
+            <textarea
+              class="menu-container__top-section__input-container__textarea"
+              placeholder="Wpisz opis co ma regex robić"
+              rows="5"
+            ></textarea>
+          </div>
+          <div class="menu-container__top-section__primary-button">
+            <button class="menu-container__top-section__primary-button__button">
+              GENERUJ REGEX
+            </button>
+          </div>
+          <div class="menu-container__top-section__input-container">
+            <span class="menu-container__top-section__input-container__label">
+              Regex
+            </span>
+            <input
+              type="text"
+              class="menu-container__top-section__input-container__input"
+              placeholder="Wpisz regex"
+            />
+          </div>
+          <div class="menu-container__top-section__input-container__info_box">
+            <p>
+              <strong>^[a-zA-Z0-9._%+-]+</strong> — początek adresu (nazwa
+              użytkownika), może zawierać litery, cyfry, kropki, podkreślenia,
+              procenty, plusy, minusy
+            </p>
+          </div>
+          <div class="menu-container__top-section__input-container">
+            <span class="menu-container__top-section__input-container__label">
+              Wpisz wartość
+            </span>
+            <input
+              type="text"
+              class="menu-container__top-section__input-container__input"
+              placeholder="Wpisz wartość"
+            />
+          </div>
+          <div class="menu-container__top-section__primary-button">
+            <button class="menu-container__top-section__primary-button__button">
+              WALIDUJ
+            </button>
+          </div>
+          <div class="menu-container__top-section__input-container__info_box">
+            <p
+              class="menu-container__top-section__input-container__info_box__success"
+            >
+              <strong>^[a-zA-Z0-9._%+-]+</strong> — początek adresu (nazwa
+              użytkownika), może zawierać litery, cyfry, kropki, podkreślenia,
+              procenty, plusy, minusy
+            </p>
+          </div>
+        </div>
+        <button class="menu-container__content-button">Zapisz</button>
+      </div>
+    </div>
+  </body>
+</html>
