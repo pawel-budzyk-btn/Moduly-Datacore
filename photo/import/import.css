@@ -223,6 +223,7 @@
 .menu-container__content__bottom__button-switch-container__item {
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
 .menu-container__content__bottom__button-switch-container__item__switch {
