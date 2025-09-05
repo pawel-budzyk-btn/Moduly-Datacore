@@ -350,10 +350,10 @@
 .workspace-container__content__right-side-workflow-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   border-bottom: 1px solid var(--border-color);
   background-color: var(--workflow-header-background-color);
-  gap: 12px;
+  gap: 0;
 }
 
 .workspace-container__content__right-side-workflow-content {
@@ -419,13 +419,14 @@
 }
 
 .workflow-header-step {
-  padding: 12px;
+  padding: 12px 24px;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   position: relative;
+  border-right: 1px solid var(--border-color);
 }
 
 .workflow-header-step-number {
@@ -447,6 +448,10 @@
 .workflow-header-step-active {
   background-color: var(--color-a-cold-gray-1000);
   position: relative;
+}
+
+.workflow-header-step:last-child {
+  border-right: none;
 }
 
 .button-container {
