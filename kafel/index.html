@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Kafel</title>
+    <link rel="stylesheet" href="kafel.css" />
+  </head>
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    "
+  >
+    <div class="card-container">
+      <div class="card-container__header"></div>
+      <div class="card-container__content">
+        <div class="card-container__content-title">Moduł 1</div>
+        <ul>
+          <li>Linia 1</li>
+          <li>Linia 2</li>
+          <li>Linia 3</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const cardHeader = document.querySelector(".card-container__header");
+      const randomNumber = Math.floor(Math.random() * 100);
+      cardHeader.style.backgroundPosition = `-${randomNumber}px`;
+    </script>
+  </body>
+</html>
