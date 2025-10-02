@@ -1,0 +1,581 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+}
+
+.header {
+  height: 50vh;
+  background-color: #1a1a1a;
+  background-image: url(bg.png);
+  background-size: 120%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  animation: backgroundZoom 60s ease-in-out infinite;
+}
+
+/* Efekty WOW - Cząsteczki */
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    #ff0066 0%,
+    #00ffcc 25%,
+    #ff6600 50%,
+    #9900ff 75%,
+    #0066ff 100%
+  );
+  mix-blend-mode: overlay;
+  animation: smoothHueRotate 2s linear infinite;
+  pointer-events: none;
+  will-change: filter;
+}
+
+/* Efekty WOW - Świecenie */
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 70%
+  );
+  pointer-events: none;
+  animation: backgroundParallax 80s ease-in-out infinite;
+}
+
+/* Efekty WOW - Cząsteczki */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
+  border-radius: 50%;
+  animation: particleFloat 80s linear infinite;
+}
+
+.particle:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+.particle:nth-child(2) {
+  left: 20%;
+  animation-delay: 2s;
+  animation-duration: 18s;
+}
+.particle:nth-child(3) {
+  left: 30%;
+  animation-delay: 4s;
+  animation-duration: 16s;
+}
+.particle:nth-child(4) {
+  left: 40%;
+  animation-delay: 1s;
+  animation-duration: 19s;
+}
+.particle:nth-child(5) {
+  left: 50%;
+  animation-delay: 3s;
+  animation-duration: 17s;
+}
+.particle:nth-child(6) {
+  left: 60%;
+  animation-delay: 6s;
+  animation-duration: 20s;
+}
+.particle:nth-child(7) {
+  left: 70%;
+  animation-delay: 1.5s;
+  animation-duration: 18.5s;
+}
+.particle:nth-child(8) {
+  left: 80%;
+  animation-delay: 5s;
+  animation-duration: 19.5s;
+}
+.particle:nth-child(9) {
+  left: 90%;
+  animation-delay: 2.5s;
+  animation-duration: 16.8s;
+}
+.particle:nth-child(10) {
+  left: 15%;
+  animation-delay: 7s;
+  animation-duration: 18.2s;
+}
+
+/* Efekty WOW - Fale */
+.waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: waveExpand 120s ease-out infinite;
+}
+
+.wave:nth-child(1) {
+  animation-delay: 0s;
+}
+.wave:nth-child(2) {
+  animation-delay: 8s;
+}
+.wave:nth-child(3) {
+  animation-delay: 16s;
+}
+.wave:nth-child(4) {
+  animation-delay: 24s;
+}
+
+/* Efekty WOW - Błyski */
+.flash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+  animation: flashEffect 12s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 15;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    #ff0066 0%,
+    #00ffcc 25%,
+    #ff6600 50%,
+    #9900ff 75%,
+    #0066ff 100%
+  );
+  mix-blend-mode: overlay;
+  animation: smoothHueRotate 15s linear infinite;
+  pointer-events: none;
+  will-change: filter;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 70%
+  );
+  pointer-events: none;
+  animation: backgroundParallax 80s ease-in-out infinite;
+}
+
+/* Różne płaszczyzny animacji */
+.animation-layer-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 0, 150, 0.1),
+    transparent
+  );
+  animation: layerFloat1 25s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.animation-layer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(0, 255, 255, 0.08),
+    transparent
+  );
+  animation: layerFloat2 35s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.animation-layer-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 30% 70%,
+    rgba(255, 100, 0, 0.06),
+    transparent
+  );
+  animation: layerFloat3 45s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.animation-layer-4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(150, 0, 255, 0.05),
+    transparent
+  );
+  animation: layerFloat4 60s linear infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.header-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    #ff0066 0%,
+    #00ffcc 25%,
+    #ff6600 50%,
+    #9900ff 75%,
+    #0066ff 100%
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none;
+  animation: smoothColorShift 12s linear infinite,
+    gentlePulse 8s ease-in-out infinite;
+  will-change: opacity, transform, background, filter;
+}
+
+.header:hover .header-color {
+  opacity: 0.95;
+  transform: scale(1.05) rotate(2deg);
+  animation-play-state: paused;
+}
+
+.header:hover::before {
+  animation-duration: 6s;
+  animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1);
+}
+
+/* Płynne animacje kolorów */
+@keyframes smoothHueRotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes gentlePulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.01);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}
+
+@keyframes smoothColorShift {
+  0% {
+    filter: hue-rotate(0deg) saturate(1);
+  }
+  25% {
+    filter: hue-rotate(90deg) saturate(1.2);
+  }
+  50% {
+    filter: hue-rotate(180deg) saturate(1.5);
+  }
+  75% {
+    filter: hue-rotate(270deg) saturate(1.2);
+  }
+  100% {
+    filter: hue-rotate(360deg) saturate(1);
+  }
+}
+
+/* Animacje obrazka tła */
+@keyframes backgroundZoom {
+  0% {
+    background-size: 120%;
+    background-position: center;
+  }
+  25% {
+    background-size: 130%;
+    background-position: 10% center;
+  }
+  50% {
+    background-size: 140%;
+    background-position: 90% center;
+  }
+  75% {
+    background-size: 130%;
+    background-position: 5% center;
+  }
+  100% {
+    background-size: 120%;
+    background-position: center;
+  }
+}
+
+@keyframes backgroundParallax {
+  0% {
+    background-position: 0% center;
+  }
+  25% {
+    background-position: 30% center;
+  }
+  50% {
+    background-position: 70% center;
+  }
+  75% {
+    background-position: 20% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+@keyframes backgroundFloat {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(60px, 0) scale(1.05);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-40px, 0) scale(1.1);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate(80px, 0) scale(1.05);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* Efekty WOW - Animacje */
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes waveExpand {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flashEffect {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(100%) skewX(-15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(255, 0, 102, 0.5), 0 0 40px rgba(0, 255, 204, 0.3),
+      0 0 60px rgba(255, 100, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 0, 102, 0.8), 0 0 80px rgba(0, 255, 204, 0.6),
+      0 0 120px rgba(255, 100, 0, 0.4);
+  }
+}
+
+/* Animacje dla nowych płaszczyzn - Dynamiczne ruchy z zoom */
+@keyframes layerFloat1 {
+  0% {
+    transform: translateX(-30%) translateY(-20%) scale(0.6) rotate(0deg);
+    opacity: 0.2;
+  }
+  25% {
+    transform: translateX(20%) translateY(-40%) scale(1.4) rotate(90deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(40%) translateY(10%) scale(0.7) rotate(180deg);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateX(-10%) translateY(30%) scale(1.3) rotate(270deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(-30%) translateY(-20%) scale(0.6) rotate(360deg);
+    opacity: 0.2;
+  }
+}
+
+@keyframes layerFloat2 {
+  0% {
+    transform: translateX(25%) translateY(35%) scale(1.5) rotate(45deg);
+    opacity: 0.1;
+  }
+  20% {
+    transform: translateX(-35%) translateY(-25%) scale(0.5) rotate(135deg);
+    opacity: 0.6;
+  }
+  40% {
+    transform: translateX(15%) translateY(-40%) scale(1.3) rotate(225deg);
+    opacity: 0.3;
+  }
+  60% {
+    transform: translateX(-20%) translateY(20%) scale(0.7) rotate(315deg);
+    opacity: 0.8;
+  }
+  80% {
+    transform: translateX(30%) translateY(-15%) scale(1.4) rotate(45deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(25%) translateY(35%) scale(1.5) rotate(405deg);
+    opacity: 0.1;
+  }
+}
+
+@keyframes layerFloat3 {
+  0% {
+    transform: translateX(-40%) translateY(-30%) scale(0.4) rotate(-30deg);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translateX(30%) translateY(-50%) scale(1.6) rotate(60deg);
+    opacity: 0.6;
+  }
+  66% {
+    transform: translateX(-20%) translateY(40%) scale(0.6) rotate(150deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(-40%) translateY(-30%) scale(0.4) rotate(330deg);
+    opacity: 0.3;
+  }
+}
+
+@keyframes layerFloat4 {
+  0% {
+    transform: translateX(0%) translateY(0%) scale(0.8) rotate(0deg);
+    opacity: 0.2;
+  }
+  25% {
+    transform: translateX(25%) translateY(-25%) scale(1.5) rotate(90deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(0%) translateY(-50%) scale(0.5) rotate(180deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateX(-25%) translateY(-25%) scale(1.3) rotate(270deg);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(0%) translateY(0%) scale(0.8) rotate(360deg);
+    opacity: 0.2;
+  }
+}
