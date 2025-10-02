@@ -310,17 +310,6 @@ body {
   will-change: opacity, transform, background, filter;
 }
 
-.header:hover .header-color {
-  opacity: 0.95;
-  transform: scale(1.05) rotate(2deg);
-  animation-play-state: paused;
-}
-
-.header:hover::before {
-  animation-duration: 6s;
-  animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1);
-}
-
 /* Płynne animacje kolorów */
 @keyframes smoothHueRotate {
   0% {
