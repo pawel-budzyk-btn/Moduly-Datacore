@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Strumieniowy odczyt NDJSON z API (POST)</title>
+  <style>
+    body { font-family: monospace; background: #222; color: #e2e2e2; }
+    #output { white-space: pre; }
+    button { font-size: 1.2em; margin-bottom: 16px; }
+    #headerInfo { margin-bottom: 16px; color: #aaffaa; }
+    textarea { width: 100%; min-height: 50px; margin-bottom: 12px; font-family: monospace; }
+  </style>
+</head>
+<body>
+  <h2>Stream NDJSON przez POST</h2>
+  <div>
+    <label for="jsonBody">Body żądania (JSON):</label><br>
+    <textarea id="jsonBody">{ "query": "test", "user": "jan" }</textarea>
+  </div>
+  <button onclick="runFetch()">Pobierz dane z API (NDJSON, POST)</button>
+  <div id="headerInfo"></div>
+  <div id="output"></div>
+
+  <script>
+    async function runFetch() {
+      document.getElementById('output').innerText = '';
+      document.getElementById('headerInfo').innerText = '';
+      const output = document.getElementById('output');
+      const headerInfo = document.getElementById('headerInfo');
+      let bodyText = document.getElementById('jsonBody').value;
+      let body;
+      try {
+        body = JSON.stringify(JSON.parse(bodyText)); // waliduj i formatuj
+      } catch {
+        output.innerText = 'Nieprawidłowy JSON w polu Body!';
+        return;
+      }
+
+      try {
+        const response = await fetch('http://localhost:5000/Test/big-ndjson', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: body
+        });
+
+        // Odczytaj header "DataType"
+        const dataTypeHeader = response.headers.get('DataType') || response.headers.get('datatype') || response.headers.get('DATATYPE');
+        if (dataTypeHeader) {
+          headerInfo.innerText = 'Nagłówek DataType: ' + dataTypeHeader;
+        } else {
+          headerInfo.innerText = '[Brak nagłówka DataType]';
+        }
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let { value, done } = await reader.read();
+        let buffer = '';
+        while (!done) {
+          buffer += decoder.decode(value, { stream: true });
+          let lines = buffer.split('\n');
+          buffer = lines.pop(); // zostaw ostatnią (może niekompletna)
+          for (const line of lines) {
+            if (line.trim()) {
+              try {
+                const obj = JSON.parse(line);
+                output.innerText += JSON.stringify(obj, null, 2) + "\n";
+              } catch(e) {
+                output.innerText += '[Błąd parsowania]\n';
+              }
+            }
+          }
+          ({ value, done } = await reader.read());
+        }
+        // ostatnia linia po zakończeniu
+        if (buffer.trim()) {
+          try {
+            const obj = JSON.parse(buffer);
+            output.innerText += JSON.stringify(obj, null, 2) + "\n";
+          } catch(e) {}
+        }
+        output.innerText += '\n[Koniec streamu]';
+      } catch (err) {
+        output.innerText = 'Błąd: ' + err;
+      }
+    }
+  </script>
+</body>
+</html>
