@@ -27,6 +27,10 @@
   --dashboard-item-title-icon-background-color: #b9defd;
   --primary-text-color: var(--color-a-cold-gray-900);
   --secondary-text-color: var(--color-a-cold-gray-500);
+
+  /* Kolor akcentu dla topmenu - ustaw na kolor bazowy (np. #FF0000) lub pozostaw puste dla domyślnego */
+  --top-menu-accent-color: transparent;
+  --top-menu-accent-opacity: 0.15;
 }
 
 * {
@@ -38,8 +42,109 @@
 
 .workspace-container__top-menu {
   background-color: var(--color-a-cold-gray-200);
-  height: 50px;
+  padding: 4px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  /* Kolor akcentu - ustaw własny kolor lub pozostaw domyślny transparent */
+  /* Przykład aktywacji (odkomentuj): */
+  --top-menu-accent-color: #ff0000;
+  --top-menu-accent-opacity: 0.25;
+
+  /* Aby użyć innego koloru, zmień #ff0000 na dowolny kolor hex */
+  /* Przeźroczystość można ustawić od 0.1 do 0.3 dla delikatnego efektu */
+  /* Aby wyłączyć, ustaw: --top-menu-accent-color: transparent; */
+}
+
+/* SVG z opacity 10% - warstwa pod overlay z kolorem */
+.workspace-container__top-menu::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./bg-menu.svg");
+  background-repeat: no-repeat;
+  background-position: -1310px -284px;
+  background-size: 140%;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+  display: block;
+}
+
+/* Overlay z kolorem akcentu - delikatny akcent z przeźroczystością i color-mix */
+.workspace-container__top-menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--top-menu-accent-color);
+  opacity: var(--top-menu-accent-opacity);
+  mix-blend-mode: color;
+  pointer-events: none;
+  z-index: 1;
+  display: block;
+  visibility: visible;
+  will-change: opacity;
+}
+
+/* Alternatywne tryby blend - odkomentuj preferowany: */
+/* soft-light - delikatniejszy efekt (obecnie użyte: color) */
+/* .workspace-container__top-menu::before {
+  mix-blend-mode: soft-light;
+} */
+
+/* multiply - ciemniejszy efekt, lepszy dla jasnych kolorów */
+/* .workspace-container__top-menu::before {
+  mix-blend-mode: multiply;
+} */
+
+/* overlay - średni efekt (obecnie użyte: soft-light) */
+/* .workspace-container__top-menu::before {
+  mix-blend-mode: overlay;
+} */
+
+/* screen - najjaśniejszy efekt */
+/* .workspace-container__top-menu::before {
+  mix-blend-mode: screen;
+} */
+
+/* Alternatywna opcja z gradientem diagonalnym - odkomentuj jeśli preferujesz gradient zamiast overlay */
+/*
+.workspace-container__top-menu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    var(--top-menu-accent-color) 50%,
+    transparent 100%
+  );
+  opacity: var(--top-menu-accent-opacity);
+  pointer-events: none;
+  z-index: 0;
+}
+*/
+
+/* Upewnij się, że zawartość jest nad overlay */
+.workspace-container__top-menu > * {
+  position: relative;
+  z-index: 2;
 }
 
 .workspace-container__content {
