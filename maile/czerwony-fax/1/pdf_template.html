@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czerwony Fax PDF</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Mulish', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .header-top td {
+            padding-bottom: 20px;
+        }
+
+        .pill-box {
+            border: 1px solid #D1D9E8;
+            border-radius: 20px;
+            padding: 8px 20px;
+            display: inline-block;
+            font-size: 12px;
+            color: #5E6D88;
+            background: #fff;
+        }
+
+        .pill-label {
+            color: #A0AEC0;
+            margin-right: 10px;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+
+        .pill-value {
+            font-weight: 700;
+            color: #2D3748;
+        }
+
+        .main-header {
+            margin-bottom: 30px;
+        }
+
+        .stop-box {
+            border: 2px solid #ED002E;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 300px;
+        }
+
+        .stop-top {
+            background: #fff;
+            color: #ED002E;
+            font-size: 36px;
+            font-weight: 800;
+            text-align: center;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+
+        .stop-bottom {
+            background: #ED002E;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+
+        .company-info {
+            text-align: right;
+            vertical-align: top;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            margin: 20px 0 15px 0;
+            color: #1A202C;
+        }
+
+        .articles-table {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .articles-table th {
+            background-color: #E1E7F9;
+            padding: 15px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 700;
+            color: #2D3748;
+        }
+
+        .articles-table td {
+            padding: 15px;
+            font-size: 12px;
+            vertical-align: middle;
+        }
+
+        .row-white { background-color: #ffffff; }
+        .row-gray { background-color: #F6FAFD; }
+
+        .article-name {
+            font-weight: 600;
+            color: #2D3748;
+        }
+        
+        .cug {
+            display: block;
+            font-size: 11px;
+            color: #4A5568;
+            margin-top: 4px;
+        }
+
+        .info-box {
+            background-color: #F0F4F8;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            color: #4A5568;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .info-box-icon {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .locations-list {
+            background-color: #F0F4F8;
+            border-radius: 12px;
+            padding: 20px;
+            font-size: 12px;
+            color: #4A5568;
+        }
+
+        .location-row td {
+            padding: 4px 0;
+        }
+
+        .loc-id {
+            font-weight: 700;
+            color: #2D3748;
+            width: 40px;
+        }
+        
+        .loc-city {
+            font-weight: 600;
+            color: #4A5568;
+            width: 100px;
+        }
+        
+        .loc-address {
+            color: #718096;
+        }
+
+        .email-box {
+            background-color: #F0F4F8;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 13px;
+            color: #2D3748;
+        }
+        
+        .email-link {
+            color: #2D3748;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top Bar -->
+        <table class="header-top">
+            <tr>
+                <td style="text-align: left;">
+                    <div class="pill-box">
+                        <span class="pill-label">DATA</span>
+                        <span class="pill-value">2025-11-14 - 11:59</span>
+                    </div>
+                </td>
+                <td style="text-align: right;">
+                    <div class="pill-box">
+                        <span class="pill-label">NR DOK.</span>
+                        <span class="pill-value">20251114115919</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Main Header -->
+        <table class="main-header">
+            <tr>
+                <td style="width: 50%;">
+                    <div class="stop-box">
+                        <div class="stop-top">STOP</div>
+                        <div class="stop-bottom">CZERWONY FAX</div>
+                    </div>
+                </td>
+                <td class="company-info">
+                    <img src="./logo2.svg" alt="Auchan Retail" style="height: 40px; margin-bottom: 10px;"><br>
+                    <div style="font-size: 14px; font-weight: 600; margin-bottom: 5px;">Dział Jakości</div>
+                    <div style="font-size: 12px; color: #4A5568;">
+                        ul. Puławska 46<br>
+                        05-500 Piaseczno
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Articles -->
+        <div class="section-title">Lista artykułów</div>
+        <table class="articles-table">
+            <thead>
+                <tr>
+                    <th style="width: 40%;">Nazwa</th>
+                    <th style="width: 25%;">Nr Partii</th>
+                    <th style="width: 10%;">JM</th>
+                    <th style="width: 25%;">Dostawca</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row-white">
+                    <td>
+                        <div class="article-name">25 T4 110325176 SWETRY 3</div>
+                        <span class="cug">CUG: <strong>582833</strong></span>
+                    </td>
+                    <td>Tylko ze złym oznaczeniem rozmiarów</td>
+                    <td>szt</td>
+                    <td>6651 CENTRALE INT. OIA</td>
+                </tr>
+                <tr class="row-gray">
+                    <td>
+                        <div class="article-name">25 T4 110325176 SWETRY 3</div>
+                        <span class="cug">CUG: <strong>582833</strong></span>
+                    </td>
+                    <td>Tylko ze złym oznaczeniem rozmiarów</td>
+                    <td>szt</td>
+                    <td>6651 CENTRALE INT. OIA</td>
+                </tr>
+                <tr class="row-white">
+                    <td>
+                        <div class="article-name">25 T4 110325176 SWETRY 3</div>
+                        <span class="cug">CUG: <strong>582833</strong></span>
+                    </td>
+                    <td>Tylko ze złym oznaczeniem rozmiarów</td>
+                    <td>szt</td>
+                    <td>6651 CENTRALE INT. OIA</td>
+                </tr>
+                <tr class="row-gray">
+                    <td>
+                        <div class="article-name">25 T4 110325176 SWETRY 3</div>
+                        <span class="cug">CUG: <strong>582833</strong></span>
+                    </td>
+                    <td>Tylko ze złym oznaczeniem rozmiarów</td>
+                    <td>szt</td>
+                    <td>6651 CENTRALE INT. OIA</td>
+                </tr>
+                <tr class="row-white">
+                    <td>
+                        <div class="article-name">25 T4 110325176 SWETRY 3</div>
+                        <span class="cug">CUG: <strong>582833</strong></span>
+                    </td>
+                    <td>Tylko ze złym oznaczeniem rozmiarów</td>
+                    <td>szt</td>
+                    <td>6651 CENTRALE INT. OIA</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Action -->
+        <div class="section-title">Działanie</div>
+        <div class="info-box">
+            <!-- Icon placeholder -->
+            <span style="font-size: 20px; vertical-align: middle; margin-right: 10px;">👤</span>
+            WYCOFANIE - ZABEZPIECZENIE NA MAGAZYNIE
+        </div>
+
+        <!-- Reason -->
+        <div class="section-title">Powód wycofania</div>
+        <div class="info-box">
+            <!-- Icon placeholder -->
+            <span style="font-size: 20px; vertical-align: middle; margin-right: 10px;">ℹ️</span>
+            ZŁE OZNACZENIE ROZMIARÓW
+        </div>
+
+        <!-- Locations -->
+        <div class="section-title">Lokalizacje</div>
+        <div class="locations-list">
+            <table style="width: 100%;">
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+                <tr class="location-row">
+                    <td class="loc-id">002</td>
+                    <td class="loc-city">Piaseczno</td>
+                    <td class="loc-address">Puławska 46, 05-500 Piaseczno</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Email -->
+        <div class="section-title">Komunikacja email</div>
+        <div class="email-box">
+            <span style="font-size: 20px; vertical-align: middle; margin-right: 10px;">✉️</span>
+            <a href="mailto:sklepy.ali.super@auchan.pl" class="email-link">sklepy.ali.super@auchan.pl</a>, 
+            <a href="mailto:sklepy.franczyza@auchan.pl" class="email-link">sklepy.franczyza@auchan.pl</a>
+        </div>
+
+    </div>
+</body>
+</html>
