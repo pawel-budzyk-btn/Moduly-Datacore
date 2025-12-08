@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)https://pawel-budzyk-btn.github.io/Moduly-Datacore/maile/czerwony-fax/1/pdf_template.html -->
+<html lang="pl">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Czerwony Fax PDF</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&display=swap");
+
+      /* Page setup for PDF printing */
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+      }
+
+      body {
+        font-family: "Mulish", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #333;
+      }
+
+      @media print {
+        body {
+          margin: 0;
+          padding: 0;
+        }
+
+        .container {
+          width: 100%;
+          max-width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        /* Prevent page breaks inside important elements */
+        .main-header,
+        .stop-box,
+        .section-title,
+        .info-box,
+        .email-box {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+
+        .articles-table {
+          page-break-inside: auto;
+        }
+
+        .articles-table thead {
+          display: table-header-group;
+        }
+
+        .articles-table tbody tr {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+
+        /* Keep section titles with their content */
+        .section-title {
+          page-break-after: avoid;
+          break-after: avoid;
+        }
+
+        /* Spacing adjustments for print */
+        .section-title {
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+
+        .locations-list {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+
+        /* Image handling */
+        img {
+          max-width: 100%;
+          height: auto;
+          page-break-inside: avoid;
+        }
+
+        /* Link styling for print */
+        a {
+          color: #2d3748 !important;
+          text-decoration: none;
+        }
+
+        /* Ensure borders print correctly */
+        .pill-box,
+        .stop-box,
+        .info-box,
+        .email-box,
+        .locations-list {
+          border: 1px solid;
+        }
+
+        .stop-box {
+          border-width: 2px;
+        }
+      }
+
+      .container {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .header-top td {
+        padding-bottom: 20px;
+      }
+
+      .pill-box {
+        border: 1px solid #d1d9e8;
+        border-radius: 20px;
+        padding: 8px 20px;
+        display: inline-block;
+        font-size: 12px;
+        color: #5e6d88;
+        background: #fff;
+      }
+
+      .pill-label {
+        color: #a0aec0;
+        margin-right: 10px;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+
+      .pill-value {
+        font-weight: 700;
+        color: #2d3748;
+      }
+
+      .main-header {
+        margin-bottom: 30px;
+      }
+
+      .stop-box {
+        border: 2px solid #ed002e;
+        border-radius: 12px;
+        overflow: hidden;
+        width: 300px;
+      }
+
+      .stop-top {
+        background: #fff;
+        color: #ed002e;
+        font-size: 36px;
+        font-weight: 800;
+        text-align: center;
+        padding: 10px;
+        text-transform: uppercase;
+      }
+
+      .stop-bottom {
+        background: #ed002e;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        padding: 10px;
+        text-transform: uppercase;
+      }
+
+      .company-info {
+        text-align: right;
+        vertical-align: top;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 20px 0 15px 0;
+        color: #1a202c;
+      }
+
+      .articles-table {
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        page-break-inside: auto;
+      }
+
+      .articles-table th {
+        background-color: #e1e7f9;
+        padding: 15px;
+        text-align: left;
+        font-size: 12px;
+        font-weight: 700;
+        color: #2d3748;
+      }
+
+      .articles-table td {
+        padding: 15px;
+        font-size: 12px;
+        vertical-align: middle;
+      }
+
+      .row-white {
+        background-color: #ffffff;
+      }
+      .row-gray {
+        background-color: #f6fafd;
+      }
+
+      .article-name {
+        font-weight: 600;
+        color: #2d3748;
+      }
+
+      .cug {
+        display: block;
+        font-size: 11px;
+        color: #4a5568;
+        margin-top: 4px;
+      }
+
+      .info-box {
+        background-color: #f0f4f8;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        color: #4a5568;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .info-box-icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+
+      .locations-list {
+        background-color: #f0f4f8;
+        border-radius: 12px;
+        padding: 20px;
+        font-size: 12px;
+        color: #4a5568;
+      }
+
+      .location-row td {
+        padding: 4px 0;
+      }
+
+      .loc-id {
+        font-weight: 700;
+        color: #2d3748;
+        width: 40px;
+      }
+
+      .loc-city {
+        font-weight: 600;
+        color: #4a5568;
+        width: 100px;
+      }
+
+      .loc-address {
+        color: #718096;
+      }
+
+      .email-box {
+        background-color: #f0f4f8;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 13px;
+        color: #2d3748;
+      }
+
+      .email-link {
+        color: #2d3748;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Top Bar -->
+      <table class="header-top">
+        <tbody>
+          <tr>
+            <td style="text-align: left">
+              <div class="pill-box">
+                <span class="pill-label">DATA</span>
+                <span class="pill-value">{DocDate}</span>
+              </div>
+            </td>
+            <td style="text-align: right">
+              <div class="pill-box">
+                <span class="pill-label">NR DOK.</span>
+                <span class="pill-value">{DocNr}</span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Main Header -->
+      <table class="main-header">
+        <tbody>
+          <tr>
+            <td style="width: 50%">
+              <div class="stop-box">
+                <div class="stop-top">STOP</div>
+                <div class="stop-bottom">CZERWONY FAX</div>
+              </div>
+            </td>
+            <td class="company-info">
+              <img
+                src="https://datacore-dev.auchan.pl/api/Files/View/Files%2Flogo2.png"
+                alt="Auchan Retail"
+                style="height: 40px; margin-bottom: 10px"
+              /><br />
+              <div
+                style="font-size: 14px; font-weight: 600; margin-bottom: 5px"
+              >
+                Dział Jakości
+              </div>
+              <div style="font-size: 12px; color: #4a5568">
+                ul. Puławska 46<br />
+                05-500 Piaseczno
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Articles -->
+      <div class="section-title">Lista artykułów</div>
+      <table class="articles-table">
+        <thead>
+          <tr>
+            <th style="width: 40%">Nazwa</th>
+            <th style="width: 25%">Nr Partii</th>
+            <th style="width: 10%">JM</th>
+            <th style="width: 25%">Dostawca</th>
+          </tr>
+        </thead>
+        <tbody>
+          {ArticleTable}
+        </tbody>
+      </table>
+
+      <!-- Action -->
+      <div class="section-title">Działanie</div>
+      <div class="info-box">
+        <!-- Icon placeholder -->
+        <span
+          style="font-size: 20px; vertical-align: middle; margin-right: 10px"
+          >👤</span
+        >
+        [Dzialanie]
+      </div>
+
+      <!-- Reason -->
+      <div class="section-title">Powód wycofania</div>
+      <div class="info-box">
+        <!-- Icon placeholder -->
+        <span
+          style="font-size: 20px; vertical-align: middle; margin-right: 10px"
+          >ℹ️</span
+        >
+        [WidrawalReason]
+      </div>
+
+      <!-- Locations -->
+      <div class="section-title">Lokalizacje</div>
+      <div class="locations-list">
+        <table style="width: 100%">
+          <tbody>
+            {LocationRows}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Email -->
+      <div class="section-title">Komunikacja email</div>
+      <div class="email-box">
+        <span
+          style="font-size: 20px; vertical-align: middle; margin-right: 10px"
+          >✉️</span
+        >
+        <a href="mailto:sklepy.ali.super@auchan.pl" class="email-link"
+          >sklepy.ali.super@auchan.pl</a
+        >,
+        <a href="mailto:sklepy.franczyza@auchan.pl" class="email-link"
+          >sklepy.franczyza@auchan.pl</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
