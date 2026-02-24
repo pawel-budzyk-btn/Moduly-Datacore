@@ -23,7 +23,6 @@ body {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  gap: 16px;
   border: 1px solid var(--bdo-border-color);
   border-radius: 24px;
   margin-top: 24px;
@@ -63,7 +62,6 @@ body {
 /* Search Section */
 .search-section {
   position: relative;
-  margin-top: 8px;
 }
 
 .search-input-wrapper {
@@ -364,6 +362,14 @@ body {
   border-radius: 50%;
 }
 
+.radio-indicator.unselected {
+  border-color: var(--bdo-border-color);
+}
+
+.radio-indicator.unselected .radio-indicator-dot {
+  display: none;
+}
+
 .form-card-title {
   font-size: 18px;
   font-weight: 500;
@@ -374,4 +380,80 @@ body {
   font-size: 14px;
   color: var(--color-a-cold-gray-700);
   line-height: 1.4;
+}
+
+/* Table View for index3.html */
+.table-container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid var(--bdo-border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.table-header {
+  background-color: var(--color-a-cold-blue-100, #e1e7f9);
+  padding: 12px;
+  font-weight: 900;
+  text-align: center;
+  color: var(--bdo-text-main);
+  border-bottom: 0.5px solid var(--bdo-border-color);
+}
+
+.table-row {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 16px;
+  border-bottom: 0.5px solid #f0f4f8;
+}
+
+.table-row:nth-child(even) {
+  background-color: var(--color-a-cold-gray-150, #f6fafd);
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.circle-index {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--bdo-text-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: var(--color-a-cold-gray-700);
+}
+
+.circle-index.active {
+    border-color: var(--color-a-cold-gray-700);
+}
+
+.table-cell-name {
+  font-size: 15px;
+  color: var(--color-a-cold-gray-700);
+  font-weight: 600;
+}
+
+.table-cell-address {
+  font-size: 11px;
+  color: var(--bdo-text-secondary);
+  font-weight: 400;
+  margin-top: 1px;
+}
+
+.table-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-title {
+    font-size: 18px;
+    color: var(--color-a-cold-gray-700);
+    margin-left: 4px;
 }
