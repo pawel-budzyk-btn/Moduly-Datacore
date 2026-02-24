@@ -27,6 +27,7 @@ body {
   border: 1px solid var(--bdo-border-color);
   border-radius: 24px;
   margin-top: 24px;
+  aspect-ratio: 9/16;
 }
 
 /* Header Section */
@@ -301,4 +302,76 @@ body {
 
 .center-icon-inner img {
   width: 32px;
+}
+
+/* Step Indicator */
+.step-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b0c4d5; /* color-a-cold-gray-400 */
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.step-circle.active {
+  background-color: #19cd89; /* color-a-convert-500 */
+}
+
+/* Form Selection Cards */
+.form-card {
+  background: white;
+  border: 1px solid var(--bdo-border-color);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.form-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.radio-indicator {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--bdo-accent-red);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-indicator-dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--bdo-accent-red);
+  border-radius: 50%;
+}
+
+.form-card-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--bdo-text-main);
+}
+
+.form-card-description {
+  font-size: 14px;
+  color: var(--color-a-cold-gray-700);
+  line-height: 1.4;
 }
