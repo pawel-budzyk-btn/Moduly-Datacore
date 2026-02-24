@@ -97,8 +97,9 @@ body {
 /* Filters Section */
 .filters-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 12px;
+  margin-top: 12px;
 }
 
 .filter-dropdown {
@@ -119,6 +120,7 @@ body {
   gap: 8px;
   overflow-x: auto;
   padding-bottom: 4px;
+  margin-top: 12px;
 }
 
 .status-tab {
@@ -144,6 +146,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-top: 12px;
 }
 
 .bdo-card {
