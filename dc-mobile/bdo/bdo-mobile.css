@@ -663,3 +663,22 @@ body {
   transform-origin: center;
 }
 
+/* Scanner View */
+.scanner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding-bottom: 30%; /* Shift slightly up like in screenshot */
+}
+
+.scanner-text {
+  margin-top: 32px;
+  font-size: 24px;
+  color: #6b879e;
+  font-weight: 500;
+  text-align: center;
+}
+
+
